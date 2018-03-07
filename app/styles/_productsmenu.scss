@@ -1,0 +1,49 @@
+.productsmenu{
+  display: none;
+  //display: flex;
+  flex-direction: column;
+  position: absolute;;
+  top: 100px;
+  bottom: 0;
+  left:0;
+  right: 0;
+  z-index: 100;
+  background: $background;
+  @media(min-width:$large){
+    display: flex;
+    position:relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+    background: $footTxt;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 30px -15px;
+  }
+}
+.productsmenu .products-item{
+  padding: 20px 30px;
+  border-bottom: 1px solid $borderMenu;
+  position:relative;
+    @media(min-width:$large){
+      padding: 20px 0;
+      width: calc(100% / 4 - 30px);
+      margin: 0 15px;
+      font:$fMedium;
+      color: $regTxt;
+      text-transform: uppercase;
+      border-bottom: none;
+      border-top: 1px solid $gambActive;
+        &:after{
+          content: '';
+          position: absolute;
+          bottom: 30px;
+          right: 0;
+          width: 20px;
+          height: 10px;
+          background: url(/images/svg/arrowdown.svg);
+        }
+    }
+}

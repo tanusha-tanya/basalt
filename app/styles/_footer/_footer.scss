@@ -1,0 +1,99 @@
+.footer{
+  background: $footerBg;
+  border-bottom: $gambActive 2px solid;
+  h3{
+    text-transform: uppercase;
+    font: $fSmall;
+    color: $footerh3;
+  }
+}
+.copy{
+  margin-bottom: 20px;
+  color: $footTxt;
+  font: $fBase;
+  @media(min-width:$tablet){
+    margin-bottom: 0;
+  }
+}
+.footer-wrap{
+  @media(min-width:$tablet){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+.foter-item__full{
+  display: none;
+  @media(min-width:$large){
+    display: block;
+    width: calc(100% / 4 - 30px);
+    margin: 0 15px;
+  }
+}
+.foter-item__menu{
+  display: none;
+  li{
+    list-style: none;
+    a{
+      font: $fSmall;
+      color: $footTxt;
+    }
+  }
+  @media(min-width:$large){
+    display: block;
+    width: calc(100% / 2 - 30px);
+    margin: 0 15px;
+    column-width: 50%;
+    column-count: 2;
+    column-gap: 30px;
+  }
+}
+.footer-item{
+  @media(min-width:$large){
+    width: calc(100% / 4 - 30px);
+    margin: 0 15px;
+  }
+}
+.picom{
+  font: $fTiny;
+  color: $nimpTxt;
+  text-decoration: none;
+}
+  svg{
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+/*
+$small: 360px;
+$tablet: 600px;
+$medium: 720px;
+$ipad: 1024px;
+$large: 1200px
+$fTiny: 14px/48px cuprum-regular, arial;
+$fSmall: 16px/20px cuprum-regular, arial;
+$fBase: 18px/24px cuprum-regular, arial;
+$fMedium: 24px/30px cuprum-regular, arial;
+$fWidth: 36px/40px cuprum-bold, arial;
+$fphone: 36px/40px cuprum-regular, arial;
+$fWidth_min: 30px/40px cuprum-bold, arial;
+$fphone_min: 30px/40px cuprum-regular, arial;
+$fBig: 40px/46px cuprum-regular, arial;
+$fBigest: 56px/60px cuprum-regular, arial;
+$fh2: 30px/40px cuprum-regular, arial;
+$fbigh1: 70px/72px cuprum-regular, arial;
+$fbigh2: 60px/64px cuprum-regular, arial;
+$impTxt: #9ECC2E;
+$regTxt: #000000;
+$nimpTxt: #828282;
+$pText: #4F4F4F;
+$footTxt: #FFFFFF;
+$gamb: #C4C4C4;
+$gambActive: #9ECC2E;
+$add: #C4C4C4;
+$borderMenu: #E0E0E0;
+$background:#F2F2F2;
+$sliderBg: #F5F7F0;
+$footerBg:#333333
+*/

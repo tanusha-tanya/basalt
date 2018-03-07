@@ -1,0 +1,30 @@
+.properties-text{
+  margin: 20px auto;
+}
+.properties-title{
+  font: $fMedium;
+  color: $regTxt;
+}
+.properties-items{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px -15px;
+}
+.properties-item{
+  width: calc(100% / 2 - 30px);
+  margin: 20px 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  figcaption{
+    color: $regTxt;
+    font: $fSmall;
+    margin: 30px 0;
+  }
+  @media(min-width: $tablet){
+      width: calc(100% / 3 - 30px);
+  }
+  @media(min-width: $large){
+      width: calc(100% / 5 - 30px);
+  }
+}

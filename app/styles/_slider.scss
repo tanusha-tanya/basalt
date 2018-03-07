@@ -1,0 +1,112 @@
+.slider{
+  overflow: hidden;
+}
+.slider-wrap{
+  width: 100%;
+  background: $sliderBg;
+}
+.slider-item{
+  display: flex;
+  align-items: center;
+  @media(min-width: $tablet){
+    margin-right: -60px;
+  }
+}
+.slider-img{
+  display:none;
+  overflow: hidden;
+  img{
+    max-width: 100%;
+  }
+  @media(min-width: $tablet){
+    display:block;
+  }
+}
+.slider-text{
+  @media(min-width: $tablet){
+    min-width: 320px;
+  }
+}
+.slider-h1{
+  font: $fBigest;
+  color: #9ECC2E;
+  margin: 0;
+  text-transform: uppercase;
+  @media(min-width:$large){
+    font: $fbigh1;
+  }
+}
+.slider-title{
+  position: relative;
+  padding: 20px 0;
+  margin: 20px 0;
+  max-width: 300px;
+  &:after, &:before{
+    content: "";
+    width: 170px;
+    height: 2px;
+    position:absolute;
+    background: $gambActive;
+  }
+  &:before{
+    top: 0;
+    left: -15px;
+  }
+  &:after{
+    bottom: 0;
+    right: -15px;
+  }
+  @media(min-width:$large){
+    max-width: 500px;
+  }
+}
+.slider-h2{
+  font: $fBig;
+  color: $regTxt;
+  text-transform: uppercase;
+  display: block;
+  span:first-of-type{
+    float: left;
+  }
+  span:nth-of-type(2){
+    float: right;
+  }
+  &:after, &:before{
+    content: "";
+    display: block;
+    clear: both;
+  }
+  @media(min-width: $tablet){
+    font: $fh2;
+  }
+  @media(min-width:$large){
+    font: $fbigh2;
+  }
+}
+.slider-description{
+  font: $fBase;
+  color: $pText;
+  @media(min-width:$large){
+    font: $fSmall;
+    max-width: 340px;
+  }
+}
+.slider-arrows{
+  position:relative;
+  height: 80px;
+
+}
+.slider-arrows svg{
+  width: 40px;
+  height: 20px;
+  fill: $regTxt;
+  color: $regTxt;
+  bottom: 40px;
+  position: absolute;
+}
+.arrowleft{
+  transform: rotate(180deg);
+}
+.arrowright{
+  left: 70px;
+}

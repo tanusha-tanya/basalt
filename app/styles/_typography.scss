@@ -1,0 +1,41 @@
+@font-face{
+    font-family: cuprum-bold;
+    src: url("../fonts/cuprum-bold/Cuprum-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face{
+    font-family: cuprum-bolditalic;
+    src: url("../fonts/cuprum-bolditalic/Cuprum-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: Italic;
+}
+@font-face{
+    font-family: cuprum-italic;
+    src: url("../fonts/cuprum-italic/Cuprum-Italic.ttf");
+    font-weight: normal;
+    font-style: Italic;
+}
+@font-face{
+    font-family: cuprum-regular;
+    src: url("../fonts/cuprum-regular/Cuprum-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**
+* VARS
+**/
+$fTiny: 14px/48px cuprum-regular, arial;
+$fSmall: 16px/20px cuprum-regular, arial;
+$fBase: 18px/24px cuprum-regular, arial;
+$fMedium: 24px/30px cuprum-regular, arial;
+$fWidth: 36px/40px cuprum-bold, arial;
+$fphone: 36px/40px cuprum-regular, arial;
+$fWidth_min: 30px/40px cuprum-bold, arial;
+$fphone_min: 30px/40px cuprum-regular, arial;
+$fBig: 40px/46px cuprum-regular, arial;
+$fBigest: 56px/60px cuprum-regular, arial;
+$fh2: 30px/40px cuprum-regular, arial;
+$fbigh1: 70px/72px cuprum-regular, arial;
+$fbigh2: 60px/64px cuprum-regular, arial;
