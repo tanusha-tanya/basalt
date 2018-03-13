@@ -23,23 +23,29 @@ body{
   width: 100%;
   @media(min-width: 1170px) {
     width:1170px;
-    padding: 30px 0;
-    margin: 30px auto;
   }
 }
-h2{
+main{
+  flex-grow: 1;
+}
+h1, .h1{
+  color:$impTxt;
+  font:$fBig;
+  text-transform: uppercase;
+}
+h2, .h2{
   font: $fBig;
   color: $gambActive;
   text-transform: uppercase;
-  margin: 30px 0 20px 0;
+  margin: 9px 6px;
 }
-h2.bordered{
+h2.bordered, .h2.bordered{
   display: inline-block;
   margin-bottom: 20px;
   padding-bottom: 15px;
   border-bottom: $gambActive 2px solid;
 }
-h3{
+h3, .h3{
   text-transform: uppercase;
   font: $fMedium;
   color: $regTxt;

@@ -1,3 +1,10 @@
 extends _layouts/inner
 block title
   title Контакты
+block content
+  .container
+    include _layouts/breadcrumbs
+    include _layouts/_contacts/offices
+    include _layouts/_contacts/map
+    include _layouts/_contacts/form
+    include _layouts/_contacts/requisites

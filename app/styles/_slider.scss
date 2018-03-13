@@ -1,9 +1,12 @@
 .slider{
+    @media(min-width:$large){
   overflow: hidden;
+}
 }
 .slider-wrap{
   width: 100%;
   background: $sliderBg;
+  margin-top: -31px;
 }
 .slider-item{
   display: flex;
@@ -30,7 +33,8 @@
 .slider-h1{
   font: $fBigest;
   color: #9ECC2E;
-  margin: 0;
+  margin-left: 2px;
+  margin-top: -2px;
   text-transform: uppercase;
   @media(min-width:$large){
     font: $fbigh1;
@@ -49,11 +53,11 @@
     background: $gambActive;
   }
   &:before{
-    top: 0;
+    top: -21px;
     left: -15px;
   }
   &:after{
-    bottom: 0;
+    bottom: 4px;
     right: -15px;
   }
   @media(min-width:$large){
@@ -67,9 +71,13 @@
   display: block;
   span:first-of-type{
     float: left;
+    margin-top: -18px;
+    margin-left: 2px;
   }
   span:nth-of-type(2){
     float: right;
+    margin-top: 4px;
+    margin-right: 3px;
   }
   &:after, &:before{
     content: "";
@@ -86,6 +94,8 @@
 .slider-description{
   font: $fBase;
   color: $pText;
+  margin-top: 30px;
+  margin-left: 1px;
   @media(min-width:$large){
     font: $fSmall;
     max-width: 340px;
@@ -93,7 +103,7 @@
 }
 .slider-arrows{
   position:relative;
-  height: 80px;
+  height: 53px;
 
 }
 .slider-arrows svg{
@@ -101,12 +111,13 @@
   height: 20px;
   fill: $regTxt;
   color: $regTxt;
-  bottom: 40px;
+  bottom: 3px;
   position: absolute;
 }
 .arrowleft{
   transform: rotate(180deg);
+  left: 2px;
 }
 .arrowright{
-  left: 70px;
+  left: 72px;
 }
