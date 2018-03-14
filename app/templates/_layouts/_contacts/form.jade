@@ -1,0 +1,21 @@
+.h2 Остались вопросы?
+.form-wrap
+  .form-name Заполните форму или позвоните по номеру:
+  .form-tel
+    a(href="tel:+73414547115")
+      svg.form-svg(role="img")(width="20")(height="20"): use(xlink:href="#telephone")
+      span +7 (34145) 47-115
+  form(action="")
+    .form-field
+      input(type="text")(name="name")(placeholder="ФИО")
+    .form-field
+      input(type="text")(name="phone")(placeholder="Телефон")
+    .form-field
+      input(type="text")(name="post")(placeholder="Почта")
+    .form-field
+      textarea(type="text")(name="order")(placeholder="Ваш заказ")
+    .form-field
+      input(type="checkbox")(id="agree")
+      label(for="agree") Согласен на обработку персональных данных
+    .form-field
+      button(type="submit")(name="send")(value="Отправить") Отправить

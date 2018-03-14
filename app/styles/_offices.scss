@@ -1,0 +1,32 @@
+.officese-item{
+  margin-bottom: 30px;
+}
+.offices-title{
+  font: $fMedium;
+  color: $regTxt;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+.offices-ref{
+  font: $fadaptive;
+  color: $nimpTxt;
+  text-decoration: underline;
+}
+.officese-scheme{
+  padding: 15px;
+}
+.officese-img{
+  float: left;
+  margin-right: 10px;
+}
+.officese-link{
+  font: $fadaptive;
+  span{
+  color: $pText;
+  }
+  a{
+    display: block;
+    color: $impTxt;
+    text-decoration: underline;
+  }
+}

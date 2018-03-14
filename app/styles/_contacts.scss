@@ -1,0 +1,96 @@
+.map{
+  margin: 0 -30px;
+  width: 380px;
+  height: 360px;
+}
+.contacts, .contacts a{
+  font: $fadaptive;
+  color: $pText;
+  text-decoration: none;
+  p{
+    margin: 15px 0;
+  }
+}
+.form-name{
+  font: $fMedium;
+  color: $regTxt;
+  text-transform: uppercase;
+}
+.form-tel{
+  margin: 5px 0;
+  a{
+    text-decoration: none;
+    span{
+      border-bottom: 1px solid $regTxt;
+      font: $fphone_min;
+      color:$regTxt;
+    }
+  }
+}
+.form-svg{
+  margin-right: 10px;
+}
+.form-field{
+  margin: 15px 0;
+  width: 100%;
+}
+.form-field input[type="text"],  textarea{
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  border: 1px solid $borderMenu;
+}
+.form-field textarea{
+    height: 160px;
+    padding: 10px 20px;
+}
+.form-field button{
+  display: block;
+  margin: 20px auto 20px auto;
+  background: $gambActive;
+  outline: none;
+  border: none;
+  padding: 10px 40px;
+  color:$footTxt;
+  position:relative;
+}
+.form-field input[type="checkbox"]{
+  visibility: hidden;
+  position: absolute;
+  &+label{
+    position:relative;
+    display: block;
+    padding-left: 30px;
+    cursor: pointer;
+    color: $nimpTxt;
+    font: $fSmall;
+    &:before{
+      content: " ";
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      border: 1px solid $borderMenu;
+      left: 10px;
+      top: 5px;
+      background:$footTxt;
+    }
+  }
+  &:checked{
+    &+label{
+      &:after{
+        content: "";
+        width: 9px;
+        height: 9px;
+        position:absolute;
+        left: 13px;
+        top: 8px;
+        background: $gambActive;
+      }
+    }
+  }
+}
+.requisites{
+  font: $fadaptive;
+  text-transform: uppercase;
+  color: $footerh3;
+}

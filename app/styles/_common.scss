@@ -8,6 +8,7 @@ html, body {
   margin: 0 auto;
   font: $fBase;
   color: $pText;
+  background: $bodyBg;
 }
 body{
   display: flex;
@@ -34,7 +35,7 @@ h1, .h1{
   text-transform: uppercase;
 }
 h2, .h2{
-  font: $fBig;
+  font: $fh2;
   color: $gambActive;
   text-transform: uppercase;
   margin: 9px 6px;
