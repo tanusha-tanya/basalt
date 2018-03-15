@@ -1,0 +1,27 @@
+.paginator{
+  margin: 20px auto;
+  ul{
+    display: flex;
+    justify-content: space-between;
+  li{
+    list-style: none;
+  }
+  }
+}
+.paginator-href{
+  color: #000000;
+  text-decoration: none;
+  font: $fMedium;
+  svg{
+    color: $gamb;
+    fill:$gamb;
+  }
+}
+.paginator-href__prev{
+  svg{
+    transform: rotate(180deg);
+  }
+}
+.paginator-href__current{
+  color: $gambActive;
+}

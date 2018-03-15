@@ -52,3 +52,7 @@ h3, .h3{
   color: $regTxt;
   margin: 30px 0 20px 0;
 }
+.blockwrap{
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,13 @@
+.share-container{
+  width: calc(75% - 30px);
+  display: flex;
+  align-items: center;
+}
+.share-btn{
+  margin-right:20px;
+}
+.share-hidden{
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}

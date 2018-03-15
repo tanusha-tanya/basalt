@@ -1,0 +1,13 @@
+.up{
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+  font:   $fSmall;
+  color:   $footerh3;
+  position: absolute;
+  right: 0;   
+}
+.up-svg{
+  transform: rotate(-90deg);
+  fill:   $footerh3;
+}
