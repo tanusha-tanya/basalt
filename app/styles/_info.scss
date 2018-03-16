@@ -25,32 +25,7 @@
 .detailarticle-content{
   font: $fBase;
   color: $articleTxt;
-  p{
-    margin: 20px auto;
-  }
-  h3{
-    font: $fMedium;
-    color: $pText;
-    text-transform: none;
-  }
-  ul, ol{
-    margin-top: 30px;
-  }
-  li{
-    list-style: none;
-    position:relative;
-    text-indent: 20px;
-    margin: 20px auto;
-    &:before{
-      content: '';
-      position:absolute;
-      left: 0;
-      top: 8px;
-      width: 10px;
-      height: 1px;
-      background: $pText;
-    }
-  }
+
 }
 
 /*
