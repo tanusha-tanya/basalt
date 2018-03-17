@@ -1,16 +1,21 @@
 .pluses-wrap{
   @media(min-width:$tablet){
-  column-width: 50%;
-  column-count: 2;
-  column-gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -15px;
   }
   @media(min-width:$large){
     display: flex;
-    margin: 0 -15px;
+
     flex-wrap: wrap;
   }
 }
 .plus-item{
+  @media(min-width:$tablet){
+    width: calc(100% / 2 - 30px);
+    margin: 0 15px;
+  }
   @media(min-width:$large){
     width: calc(100% / 4 - 30px);
     margin: 0 15px;

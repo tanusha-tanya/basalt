@@ -1,4 +1,5 @@
 .footer{
+  margin-top: 100px;
   background: $footerBg;
   border-bottom: $gambActive 2px solid;
   h3{
@@ -8,7 +9,6 @@
   }
 }
 .copy{
-  margin-bottom: 20px;
   color: $footTxt;
   font: $fBase;
   @media(min-width:$tablet){

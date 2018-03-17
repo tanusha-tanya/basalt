@@ -38,7 +38,6 @@ h2, .h2{
   font: $fh2;
   color: $gambActive;
   text-transform: uppercase;
-  margin: 9px 6px;
 }
 h2.bordered, .h2.bordered{
   display: inline-block;
@@ -60,16 +59,18 @@ h4, .h4{
   display: flex;
   justify-content: space-between;
 }
-p{
-  margin: 20px auto;
-  font: $fBase;
-  color: $articleTxt;
-}
-h3{
-  font: $fMedium;
-  color: $pText;
-  text-transform: none;
-}
+
+  p{
+    margin: 20px auto;
+    font: $fBase;
+    color: $articleTxt;
+  }
+  h5{
+    font: $fadaptive;
+    color: $pText;
+    text-transform: none;
+  }
+.content{
 ul, ol{
   margin-top: 30px;
 }
@@ -87,4 +88,5 @@ li{
     height: 1px;
     background: $pText;
   }
+}
 }

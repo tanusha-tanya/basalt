@@ -33,8 +33,7 @@
 .slider-h1{
   font: $fBigest;
   color: #9ECC2E;
-  margin-left: 2px;
-  margin-top: -2px;
+  margin-top: 0;
   text-transform: uppercase;
   @media(min-width:$large){
     font: $fbigh1;
@@ -54,11 +53,10 @@
   }
   &:before{
     top: -21px;
-    left: -15px;
   }
   &:after{
     bottom: 4px;
-    right: -15px;
+    right: 0px;
   }
   @media(min-width:$large){
     max-width: 500px;
@@ -72,7 +70,6 @@
   span:first-of-type{
     float: left;
     margin-top: -18px;
-    margin-left: 2px;
   }
   span:nth-of-type(2){
     float: right;
@@ -95,7 +92,6 @@
   font: $fBase;
   color: $pText;
   margin-top: 30px;
-  margin-left: 1px;
   @media(min-width:$large){
     font: $fSmall;
     max-width: 340px;
@@ -116,8 +112,7 @@
 }
 .arrowleft{
   transform: rotate(180deg);
-  left: 2px;
 }
 .arrowright{
-  left: 72px;
+  left: 70px;
 }

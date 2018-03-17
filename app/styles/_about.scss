@@ -1,5 +1,6 @@
 .about {
   background: $sliderBg;
+  position:relative;
 }
 .about-wrap{
   @media(min-width:$tablet) {
@@ -8,9 +9,7 @@
 }
 .about-text{
   p{
-    text-transform: uppercase;
-    color: $regTxt;
-    font: $fBase;
+    line-height: 1.5;
   }
   @media(min-width:$tablet){
     width:calc(100% / 2 - 15px);
@@ -49,4 +48,12 @@
     }
   }
     @media(min-width:$tablet) {}
+    @media(min-width:$large) {
+    img{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 530px;
+    }
+  }
 }

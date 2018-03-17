@@ -64,8 +64,7 @@ header.header{
   p, a{
     color: $nimpTxt;
     font: $fBase;
-    margin-left: 1px;
-    margin-top: 8px;
+    margin: 8px 0;
   }
   a{
     text-decoration: none;
@@ -121,6 +120,9 @@ header.header{
         @media(min-width:$medium) and (max-width: $ipad){
           font: $fBase;
         }
+        @media(min-width:$large){
+          border-bottom: none;
+        }
       .weight{
         font: $fWidth;
       @media(min-width:$medium) and (max-width: $ipad){
@@ -142,11 +144,13 @@ header.header{
         @media(min-width:$large){
           width: 20px;
           height: 20px;
+          margin-right:10px;
         }
           @media(min-width:$medium) and (max-width: $ipad){
             margin-right: 5px;
             width: 15px;
             height: 15px;
+            margin-bottom:0;
           }
     }
     @media(min-width: $large){
@@ -244,6 +248,8 @@ header.header.gamburger-menu-open{
     display: block;
     width: 100%;
     margin-top: 25px;
+    border-bottom: 1px $borderMenu solid;
+    padding-bottom: 25px;
     ul{
       display: flex;
       justify-content: space-between;
