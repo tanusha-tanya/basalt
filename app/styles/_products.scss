@@ -82,3 +82,29 @@
   color: $footTxt;
   background: $gambActive;
 }
+.catalogmenu-wrap{
+  display:none;
+  @media(min-width:$large){
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+  }
+}
+.catalog-item {
+  width: calc(100% / 4 - 30px);
+  margin: 0 15px;
+  position: relative;
+  border-top: 2px $gambActive solid;
+  padding-top: 25px;
+    a{
+      color: $regTxt;
+      font: $fMedium;
+      text-decoration: none;
+      text-transform:uppercase;
+    }
+   svg{
+     position: absolute;
+     right: 0;
+     bottom: 0;
+   } 
+}

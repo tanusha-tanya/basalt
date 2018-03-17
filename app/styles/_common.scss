@@ -22,8 +22,27 @@ body{
   margin: 0 auto;
   overflow: hidden;
   width: 100%;
-  @media(min-width: 1170px) {
+  @media(min-width: large) {
     width:1170px;
+  }
+}
+.container.wraper {
+  @media(min-width:$large) {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -15px;
+ }
+}
+.col-4{
+  @media(min-width:$large) {
+    width: calc(33,3% - 30px);
+    margin: 0 15px;
+  }
+}
+.col-8{
+  @media(min-width:$large) {
+    width: calc(66,6% - 30px);
+    margin: 0 15px;
   }
 }
 main{

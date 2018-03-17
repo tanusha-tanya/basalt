@@ -4,7 +4,10 @@ block title
 block content
   .container
     include _layouts/breadcrumbs
-    include _contacts/offices
-    include _contacts/map
-    include _contacts/form
-    include _contacts/requisites
+  .container.wraper 
+    .col-4 
+      include _contacts/offices
+    .col-8
+      include _contacts/map
+      include _contacts/form
+      include _contacts/requisites
