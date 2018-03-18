@@ -1,8 +1,14 @@
 extends _layouts/inner
 block title
-  title Контакты
+  title Информация
 block content
   .container
     include _layouts/breadcrumbs
-    include _information/lenta
-    include _layouts/paginator
+  .container.wraper
+    .col-4
+      h1 Полезная Информация
+    .col-8
+      include _information/lenta
+      include _layouts/paginator
+  .container
+    include _layouts/catalogmenu
