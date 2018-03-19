@@ -260,9 +260,21 @@ header.header.gamburger-menu-open{
           text-decoration: none;
           text-transform: uppercase;
           font: $fBase;
+          position:relative;
+          cursor:pointer;
+          &:hover, &:active, &:focus, &.current{
+            &:after{
+              content: "";
+              position:absolute;
+              height: 2px;
+              width:100%;
+              background: $borderActive;
+              bottom: -26px;
+              left: 0;
+            }
+          }
         }
       }
     }
   }
-
 }

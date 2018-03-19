@@ -5,9 +5,14 @@
   font:   $fSmall;
   color:   $footerh3;
   position: absolute;
-  right: 0;   
+  right: 30px;
+  bottom: 148px;
+  p{
+    color:   $footerh3;
+  }
 }
 .up-svg{
   transform: rotate(-90deg);
   fill:   $footerh3;
+  margin-top:20px;
 }

@@ -14,3 +14,8 @@ gamburger.addEventListener( "click" , function(){isClose? openMenu() : closenMen
     header.classList.remove("gamburger-menu-open");
     isClose = true;
   }
+$('.slider').slick({
+  prevArrow:'<svg role="img" width="40" height="20" class="arrowleft"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow"> </use></svg>',
+  nextArrow:'<svg role="img" width="40" height="20" class="arrowright"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow"> </use></svg>',
+  appendArrows:$('.slider-arrows')
+});

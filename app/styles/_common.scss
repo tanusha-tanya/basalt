@@ -20,10 +20,10 @@ body{
   min-width: 320px;
   padding: 30px;
   margin: 0 auto;
-  overflow: hidden;
   width: 100%;
-  @media(min-width: large) {
+  @media(min-width: $large) {
     width:1170px;
+    max-width: 1170px;
   }
 }
 .container.wraper {
@@ -45,6 +45,11 @@ body{
     margin: 0 15px;
   }
 }
+.col-2{
+  @media(min-width:$large) {
+    width: calc(50% - 30px);
+  }
+}
 main{
   flex-grow: 1;
 }
@@ -57,12 +62,6 @@ h2, .h2{
   font: $fh2;
   color: $gambActive;
   text-transform: uppercase;
-}
-h2.bordered, .h2.bordered{
-  display: inline-block;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
-  border-bottom: $gambActive 2px solid;
 }
 h3, .h3{
   text-transform: uppercase;

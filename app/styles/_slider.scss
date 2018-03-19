@@ -1,33 +1,58 @@
 .slider{
-    @media(min-width:$large){
   overflow: hidden;
-}
 }
 .slider-wrap{
   width: 100%;
   background: $sliderBg;
   margin-top: -31px;
+  @media(min-width: $tablet){
+  margin-top: 0;
+  }
 }
 .slider-item{
-  display: flex;
-  align-items: center;
+  width: 100%;
   @media(min-width: $tablet){
-    margin-right: -60px;
+  position:relative;
+  overflow:hidden;
+  }
+}
+.slider-inner{
+  display:flex;
+  @media(min-width: $large){
+    max-width:1170px;
+    margin:0 auto;
+
   }
 }
 .slider-img{
   display:none;
-  overflow: hidden;
-  img{
-    max-width: 100%;
-  }
   @media(min-width: $tablet){
+    float: right;
+    width: 42%;
+    position:relative;
     display:block;
+    img{
+      position: absolute;
+      left: 0;
+      top:0;
+      height:100%;
+    }
+  }
+    @media(min-width:$ipad) and (max-width: $large){
+      img{
+      top:0;
+      bottom: auto;
+    }
   }
 }
 .slider-text{
+  padding: 30px;
   @media(min-width: $tablet){
-    min-width: 320px;
+    float: left;
+    max-width: 58%;
+  }
+  @media(min-width: $large){
+    max-width: auto;
   }
 }
 .slider-h1{
@@ -35,6 +60,9 @@
   color: #9ECC2E;
   margin-top: 0;
   text-transform: uppercase;
+  @media(min-width:$tablet){
+    font: $fbigh2;
+  };
   @media(min-width:$large){
     font: $fbigh1;
   }
@@ -50,6 +78,9 @@
     height: 2px;
     position:absolute;
     background: $gambActive;
+    @media(min-width:$tablet){
+      width: 243px;
+    }
   }
   &:before{
     top: -21px;
@@ -58,6 +89,7 @@
     bottom: 4px;
     right: 0px;
   }
+
   @media(min-width:$large){
     max-width: 500px;
   }
@@ -81,9 +113,9 @@
     display: block;
     clear: both;
   }
-  @media(min-width: $tablet){
-    font: $fh2;
-  }
+  @media(min-width:$tablet){
+    font: $fBig;
+  };
   @media(min-width:$large){
     font: $fbigh2;
   }
@@ -93,21 +125,19 @@
   color: $pText;
   margin-top: 30px;
   @media(min-width:$large){
-    font: $fSmall;
     max-width: 340px;
   }
 }
 .slider-arrows{
   position:relative;
   height: 53px;
-
+  margin-left: 30px;
 }
 .slider-arrows svg{
   width: 40px;
   height: 20px;
   fill: $regTxt;
   color: $regTxt;
-  bottom: 3px;
   position: absolute;
 }
 .arrowleft{
@@ -115,4 +145,10 @@
 }
 .arrowright{
   left: 70px;
+}
+.slider-item.slick-slide{
+  &:focus, &:hover{
+    outline: none;
+    border: none;
+  }
 }
