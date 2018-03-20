@@ -1,20 +1,12 @@
 <svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<title>facebook</title>
+<title>Vector</title>
 <desc>Created using Figma</desc>
 <g id="Canvas" transform="translate(-11073 -4876)">
-<g id="facebook">
-<g id="Group">
-<g id="Rectangle 3">
-<use xlink:href="#path0_fill" transform="translate(11073 4876)" fill="#FFFFFF"/>
-</g>
 <g id="Vector">
-<use xlink:href="#path1_fill" transform="translate(11073 4876)" fill="#3A559F"/>
-</g>
-</g>
+<use xlink:href="#path0_fill" transform="translate(11073 4876)" fill="#3A559F"/>
 </g>
 </g>
 <defs>
-<path  d="M 0 0L 30 0L 30 30L 0 30L 0 0Z"/>
-<path d="M 0 0L 0 30L 15.9768 30L 15.9768 18.4116L 12.0712 18.4116L 12.0712 13.6809L 15.9768 13.6809L 15.9768 9.70798C 15.9768 6.81858 18.3191 4.47627 21.2085 4.47627L 25.2915 4.47627L 25.2915 8.73024L 22.3699 8.73024C 21.4518 8.73024 20.7075 9.47456 20.7075 10.3927L 20.7075 13.681L 25.2181 13.681L 24.5947 18.4117L 20.7075 18.4117L 20.7075 30L 29.9999 30L 29.9999 0L 0 0Z"/>
+<path id="path0_fill" d="M 0 0L 0 30L 15.9768 30L 15.9768 18.4116L 12.0712 18.4116L 12.0712 13.6809L 15.9768 13.6809L 15.9768 9.70798C 15.9768 6.81858 18.3191 4.47627 21.2085 4.47627L 25.2915 4.47627L 25.2915 8.73024L 22.3699 8.73024C 21.4518 8.73024 20.7075 9.47456 20.7075 10.3927L 20.7075 13.681L 25.2181 13.681L 24.5947 18.4117L 20.7075 18.4117L 20.7075 30L 29.9999 30L 29.9999 0L 0 0Z"/>
 </defs>
 </svg>

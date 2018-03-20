@@ -18,6 +18,12 @@
       flex-grow: 1;
   }
 }
+.detailarticle{
+  @media(min-width: $large){
+    margin-top:40px;
+    width:600px;
+  }
+}
 .lenta-img, .detailarticle-img{
   position: relative;
   height:0;

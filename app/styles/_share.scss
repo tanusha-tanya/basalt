@@ -1,7 +1,14 @@
 .share-container{
-  width: calc(75% - 30px);
+  width: 185px;
   display: flex;
   align-items: center;
+  float: right;
+  margin: 40px 0;
+  &:before{
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
 .share-btn{
   margin-right:20px;

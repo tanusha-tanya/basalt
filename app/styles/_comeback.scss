@@ -1,5 +1,7 @@
 .comeback{
   width: calc(100% / 12 - 30px);
+  float: left;
+  margin: 40px 0;
 }
 .comeback-arrow{
   fill: $nimpTxt;
