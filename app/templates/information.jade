@@ -1,14 +1,12 @@
 extends _layouts/inner
 block title
-  title Информация
+  title Полезная Информация
 block content
-  .container
-    include _layouts/breadcrumbs
-  .container.wraper
+  .blockwrap
     .col-4
       h1 Полезная Информация
     .col-8
       include _information/lenta
       include _layouts/paginator
-  .container
-    include _layouts/catalogmenu
+  h2 Продукция
+  include _layouts/catalogmenu

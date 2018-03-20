@@ -2,10 +2,12 @@
   margin-top: 100px;
   background: $footerBg;
   border-bottom: $gambActive 2px solid;
+  color: $footTxt;
   h3{
     text-transform: uppercase;
     font: $fSmall;
     color: $footerh3;
+    margin: 10px 0;
   }
 }
 .copy{
@@ -23,38 +25,51 @@
     align-items: center;
     flex-wrap: wrap;
   }
+  @media(min-width:$large){
+    margin: 20px -15px 0 -15px;
+    align-items: flex-start;
+  }
 }
-.foter-item__full{
+.footer-item__full{
   display: none;
+  p{
+    color: $footerh3;
+  }
   @media(min-width:$large){
     display: block;
     width: calc(100% / 4 - 30px);
     margin: 0 15px;
   }
+  &.right{
+    text-align: right;
+  }
 }
-.foter-item__menu{
+.footer-item__menu{
   display: none;
-  li{
-    list-style: none;
+  span{
+    display:block;
+    margin: 10px 0;
+  }
     a{
       font: $fSmall;
       color: $footTxt;
-    }
   }
   @media(min-width:$large){
     display: block;
-    width: calc(100% / 2 - 30px);
-    margin: 0 15px;
-    column-width: 50%;
-    column-count: 2;
-    column-gap: 30px;
+    justify-content: space-between;
+    width: calc(100% / 4 - 30px);
+    margin: -15px 15px;
   }
 }
 .footer-item{
   @media(min-width:$large){
-    width: calc(100% / 4 - 30px);
+    width: calc(100% / 3 - 30px);
     margin: 0 15px;
+    &.right{
+      text-align:right;
+    }
   }
+
 }
 .picom{
   font: $fTiny;
@@ -65,36 +80,14 @@
     display: inline-block;
     vertical-align: middle;
   }
-
-/*
-$small: 360px;
-$tablet: 600px;
-$medium: 720px;
-$ipad: 1024px;
-$large: 1200px
-$fTiny: 14px/48px cuprum-regular, arial;
-$fSmall: 16px/20px cuprum-regular, arial;
-$fBase: 18px/24px cuprum-regular, arial;
-$fMedium: 24px/30px cuprum-regular, arial;
-$fWidth: 36px/40px cuprum-bold, arial;
-$fphone: 36px/40px cuprum-regular, arial;
-$fWidth_min: 30px/40px cuprum-bold, arial;
-$fphone_min: 30px/40px cuprum-regular, arial;
-$fBig: 40px/46px cuprum-regular, arial;
-$fBigest: 56px/60px cuprum-regular, arial;
-$fh2: 30px/40px cuprum-regular, arial;
-$fbigh1: 70px/72px cuprum-regular, arial;
-$fbigh2: 60px/64px cuprum-regular, arial;
-$impTxt: #9ECC2E;
-$regTxt: #000000;
-$nimpTxt: #828282;
-$pText: #4F4F4F;
-$footTxt: #FFFFFF;
-$gamb: #C4C4C4;
-$gambActive: #9ECC2E;
-$add: #C4C4C4;
-$borderMenu: #E0E0E0;
-$background:#F2F2F2;
-$sliderBg: #F5F7F0;
-$footerBg:#333333
-*/
+.footer-tel{
+  font: $fphone_min;
+  color: $footTxt;
+  text-decoration: none;
+  svg{
+    margin-right:5px;
+    margin-bottom:5px;
+    color: $footTxt;
+    fill: $footTxt;
+  }
+}

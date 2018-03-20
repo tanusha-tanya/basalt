@@ -142,9 +142,12 @@
     border-color: $borderActive;
      .catalog-list{
       display: block;
-      margin-top: -20px;
+      margin-top: -10px;
       padding: 10px;
       box-shadow: 0px 4px 7px 3px $shadow;
+      position: absolute;
+      width:100%;
+      background: $background;
      }
      svg{
       transform: rotate(180deg);

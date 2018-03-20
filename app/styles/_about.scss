@@ -1,6 +1,9 @@
 .about {
   background: $sliderBg;
   position:relative;
+  @media(min-width:$large) {
+        margin: 40px auto;
+  }
 }
 .about-wrap{
   padding: 30px;
@@ -10,7 +13,7 @@
   }
     @media(min-width:$large) {
       max-width: 1170px;
-      padding:55px 30px 55px 0;
+      padding: 60px 30px 70px 0;
       margin: 0 auto;
   }
 }
@@ -30,14 +33,18 @@
     width: 100%;
     height: 2px;
     background: $gambActive;
-    top: -10px;
+    top: -25px;
+    @media(min-width:$large) {
+      top: -30px;
+    }
   }
   p{
+    margin: 30px 0;
+    display: block;
+    font: $fBase;
     line-height: 1.5;
-    font: $fMedium;
-    display: none;
     @media(min-width:$large){
-      display: block;
+    font: $fMedium;
     }
   }
   }
@@ -66,25 +73,32 @@
     img{
       position:absolute;
       left: -30px;
-      bottom: -80px;
+      bottom: -50px
     }
   @media(min-width:$tablet) {
     width:calc(100% / 2 - 15px);
     order: -1;
     margin: 0 15px;
+    img{
+      bottom: auto;
+      top:0;
+    }
   }
     @media(min-width:$large) {
     img{
       position: absolute;
       top: 0;
-      width: 530px;
+      width: 655px;
+      right: 50%;
+      left: auto;
+      bottom: -80px;
+      }
     }
   }
-}
 .about-links{
-  display: flex;
+  display:none;
   flex-wrap: wrap;
-  margin: 30px 0;
+  margin: 40px 0;
   a{
     text-transform: uppercase;
     margin-right:20px;
@@ -92,4 +106,7 @@
     color: $regTxt;
     font: $fMedium;
   }
+@media(min-width:$large) {
+  display: flex;
+}
 }

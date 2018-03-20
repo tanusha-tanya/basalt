@@ -1,5 +1,18 @@
+.officese{
+  margin: 40px -15px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  align-items: center;
+}
 .officese-item{
-  margin-bottom: 30px;
+ @media(min-width:$tablet){
+  width: calc(100% / 2 - 30px);
+}
+@media(min-width:$large){
+ width: calc(100% - 30px);
+}
+ margin: 0 15px 30px 15px;
 }
 .offices-title{
   font: $fMedium;
@@ -10,16 +23,16 @@
 .offices-ref{
   font: $fadaptive;
   color: $nimpTxt;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1px solid $nimpTxt;
 }
-.officese-scheme{
-  padding: 15px;
-}
+
 .officese-img{
-  float: left;
   margin-right: 10px;
 }
 .officese-link{
+  display: inline-block;
+  vertical-align:middle;
   font: $fadaptive;
   span{
   color: $pText;

@@ -1,5 +1,22 @@
+.lenta{
+  margin: 40px auto;
+  @media(min-width: $ipad) and (max-width: $large){
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px -15px;
+  }
+}
 .lenta-item{
-  margin: 20px auto;
+  margin: 50px auto;
+  @media(min-width: $ipad) and (max-width: $large){
+   width:calc(100% / 2 - 30px);
+   margin: 20px 15px;
+  }
+    @media(min-width: $large){
+      display: flex;
+      align-items: flex-start;
+      flex-grow: 1;
+  }
 }
 .lenta-img, .detailarticle-img{
   position: relative;
@@ -16,14 +33,47 @@
     height: 100%;
   }
 }
+
 .lenta-title{
   a{
     color:$pText;
     font: $fMedium;
+    text-decoration: none;
+    border-bottom: 1px solid $pText;
+    transition: linear filter .3s;
   }
+    @media(min-width:$large){
+  width: 50%;
+}
 }
 .detailarticle-content{
   font: $fBase;
   color: $articleTxt;
 
+}
+.lenta-img{
+  @media(min-width:$large){
+    height: auto;
+    padding: 0;
+    width: 270px;
+    margin: 0 20px 0 0;
+    min-height: 140px;
+    img{
+      position:static;
+      filter: grayscale(100%);
+      transition: linear filter .3s;
+    }
+  }
+}
+.lenta-item{
+  &:hover{
+    .lenta-img{
+      img{
+        filter: none;
+      }
+    }
+    .lenta-title a{
+      border-bottom: none;
+    }
+  }
 }
