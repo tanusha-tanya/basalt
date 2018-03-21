@@ -1,10 +1,15 @@
 extends _layouts/default
 block title
   title Базальт Эко
+block header
+  include _layouts/header
 block content
   include _layouts/slider
   include _layouts/productsmenu
-  include _layouts/catalogmenu
-  include _layouts/properties
+  .container.large-show
+    include _layouts/catalogmenu
+  .container
+    include _layouts/properties
   include _layouts/about
-  include _layouts/pluses
+  .container
+    include _layouts/pluses

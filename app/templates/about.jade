@@ -1,9 +1,12 @@
 extends _layouts/inner
 block title
   title Контакты
+block header
+  include _layouts/header_inner
 block content
-    h1 О компании
-    include _about/textabout
+  include _about/textabout
+  .container
     include _about/use
-    include _about/buy
+  include _about/buy
+  .container
     include _layouts/pluses

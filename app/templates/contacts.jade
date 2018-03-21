@@ -1,12 +1,15 @@
 extends _layouts/inner
 block title
   title Контакты
+block header
+  include _layouts/header_inner
 block content
-  .blockwrap 
-    .col-4 
-      h1 Контакты
-      include _contacts/offices
-    .col-8
-      include _contacts/map
-      include _contacts/form
-      include _contacts/requisites
+  .container
+    .blockwrap 
+      .col-4 
+        h1 Контакты
+        include _contacts/offices
+      .col-8
+        include _contacts/map
+        include _contacts/form
+        include _contacts/requisites

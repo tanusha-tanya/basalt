@@ -6,11 +6,11 @@ html.no-js(lang="ru")
     block title
   body
     include ../_includes/svg
-    include ../_layouts/header_inner
+    block header
     main
-      .container
+      .container.large-show
         include ../_layouts/breadcrumbs
-        block content
-        include ../_layouts/up
+      block content
+      include ../_layouts/up
     include ../_layouts/footer
     include ../_includes/scripts

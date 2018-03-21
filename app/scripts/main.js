@@ -19,3 +19,7 @@ $('.slider').slick({
   nextArrow:'<svg role="img" width="40" height="20" class="arrowright"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow"> </use></svg>',
   appendArrows:$('.slider-arrows')
 });
+$('.productslider').slick({
+  dots: true,
+  arrows: false
+});

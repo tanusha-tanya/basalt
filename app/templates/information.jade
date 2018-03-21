@@ -1,12 +1,15 @@
 extends _layouts/inner
 block title
   title Полезная Информация
+block header
+  include _layouts/header_inner
 block content
-  .blockwrap
-    .col-4
-      h1 Полезная Информация
-    .col-8
-      include _information/lenta
-      include _layouts/paginator
-  h2 Продукция
-  include _layouts/catalogmenu
+  .container
+    .blockwrap
+      .col-4
+        h1 Полезная Информация
+      .col-8
+        include _information/lenta
+        include _layouts/paginator
+    h2.large-show Продукция
+    include _layouts/catalogmenu

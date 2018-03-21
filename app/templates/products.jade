@@ -1,9 +1,11 @@
 extends _layouts/inner
 block title
   title Контакты
+block header
+  include _layouts/header_inner  
 block content
   .container
-    include _layouts/breadcrumbs
     h1 Продукция
     include _products/productcat
+  .container
     include _layouts/properties

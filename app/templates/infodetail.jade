@@ -1,11 +1,14 @@
 extends _layouts/inner
 block title
   title КАК ОПРЕДЕЛИТЬ ПРАВИЛЬНУЮ ТОЛЩИНУ ТЕПЛОВОЙ ИЗОЛЯЦИИ?
+block header
+  include _layouts/header_inner
 block content
-  .blockwrap
-    .col-4
-      h1 КАК ОПРЕДЕЛИТЬ ПРАВИЛЬНУЮ ТОЛЩИНУ ТЕПЛОВОЙ ИЗОЛЯЦИИ?
-    .col-8
-      include _information/detailarticle
-  h2 Продукция
-  include _layouts/catalogmenu
+  .container
+    .blockwrap
+      .col-4
+        h1 КАК ОПРЕДЕЛИТЬ ПРАВИЛЬНУЮ ТОЛЩИНУ ТЕПЛОВОЙ ИЗОЛЯЦИИ?
+      .col-8
+        include _information/detailarticle
+    h2.large-show Продукция
+    include _layouts/catalogmenu

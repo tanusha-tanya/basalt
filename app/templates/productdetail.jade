@@ -1,13 +1,14 @@
 extends _layouts/inner
 block title
   title МБОР материал базальтовый огнезащитный рулонный
+block header
+  include _layouts/header_inner
 block content
   .container
-    include _layouts/breadcrumbs
-  .container.wraper
-    .col-4
-      h1 МБОР материал базальтовый огнезащитный рулонный
-    .col-8
-      include _products/productslider
-      include _products/tabs
-      include _contacts/form
+    .blockwrap
+      .col-4
+        h1 МБОР материал базальтовый огнезащитный рулонный
+      .col-8
+        include _products/productslider
+        include _products/tabs
+        include _contacts/form
