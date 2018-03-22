@@ -82,8 +82,20 @@
 }
 .productslider-img{
   img{
-    max-width:100%;
+    width:100%;
   }
+}
+.tabs-controlls{
+  @media(min-width: $tablet){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -5px;
+  }
+    @media(min-width: $ipad){
+      justify-content: flex-start;
+      margin: 0 -1px;
+    }
 }
 .tabs-btn{
   margin: 5px 0;
@@ -95,10 +107,27 @@
   padding: 20px;
   background: $background;
   transition: linear color 0.3s, linear background 0.3s;
+  @media(min-width: $tablet){
+    width: calc(50% - 10px);
+    margin: 5px 5px;
+  }
+  @media(min-width: $ipad){
+    width: auto;
+    margin: 5px 1px;
+  }
 }
 .tabs-btn__active.tabs-btn, .tabs-btn:hover{
   color: $footTxt;
   background: $gambActive;
+}
+.tabs-content{
+  margin: 40px 0;
+}
+.tabs-inner{
+  display: none;
+}
+.tabs-inner.tabs-inner__current{
+  display:block;
 }
 .container.catalogmenu-container{
   display:none;
@@ -175,4 +204,91 @@
       transform: rotate(180deg);
      }
    }
+}
+.slick-dots{
+  position: relative;
+  text-align: center;
+  &>li{
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 5px;
+    text-indent: 0;
+    margin: 0;
+    &:before{
+      display: none!important;
+    }
+    button{
+      visibility: hidden;
+      &:before{
+        content: '';
+        display: block;
+        width: 5px;
+        height: 5px;
+        visibility: visible;
+        background: $gamb;
+        border-radius: 50%;
+      }
+    }
+    &.slick-active{
+      button{
+        &:before{
+          background: $nimpTxt;
+        }
+      }
+    }
+  }
+}
+.scroll-container{
+  padding: 30px 5px;
+}
+.certificate-slider{
+  margin: 20px -30px;
+  @media(min-width: $tablet){
+    margin: 20px auto;
+  }
+  @media(min-width: $large){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px -30px;
+  }
+}
+.certificate-item{
+  max-width: 160px;
+  margin: 0 15px;
+  img{
+    max-width: 100%;
+  }
+  @media(min-width: $large){
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.certificate-img{
+  @media(min-width: $large){
+  background: $borderMenu;
+  flex-grow: 1;
+  padding: 20% 0;
+}
+}
+.certificate-title{
+  margin-top: 20px;
+}
+
+.catalogmenu-wrap__column{
+  display:none;
+  margin: 20px -15px;
+  @media(min-width:$large){
+    display: block;
+  }
+  .catalog-item{
+    width: 270px;
+    margin: 20px 0;
+    .catalog-list{
+      z-index: 1000;
+    }
+  }
 }

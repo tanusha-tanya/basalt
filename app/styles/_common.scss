@@ -115,3 +115,31 @@ li{
   }
 }
 }
+table{
+  border-collapse: collapse;
+  border: 1px solid $borderMenu;
+  background: $footTxt;
+  white-space: nowrap;
+  text-align: center;
+  tr {
+    td{
+      &:first-child{
+        text-align: left;
+      }
+    }
+  }
+    th{
+      background:$background;
+      color: $regTxt;
+      padding: 25px 20px;
+      border: 1px solid $borderMenu;
+      font-weight: normal;
+      &.name{
+        font: $fMedium;
+      }
+    }
+   td{
+      padding: 25px  20px;
+      border: 1px solid $borderMenu;
+    }
+}

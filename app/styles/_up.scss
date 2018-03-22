@@ -7,12 +7,15 @@
   position: absolute;
   right: 30px;
   bottom: 148px;
-  p{
+  @media(min-width: $large){
+  bottom: 244px;
+  }
+  a{
     color:   $footerh3;
+    text-decoration: none;
   }
 }
 .up-svg{
   transform: rotate(-90deg);
   fill:   $footerh3;
-  margin-top:20px;
 }
