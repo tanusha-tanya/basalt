@@ -115,6 +115,9 @@
     width: auto;
     margin: 5px 1px;
   }
+  @media(min-width: $large){
+    padding: 20px 25px;
+  }
 }
 .tabs-btn__active.tabs-btn, .tabs-btn:hover{
   color: $footTxt;
@@ -280,7 +283,7 @@
 
 .catalogmenu-wrap__column{
   display:none;
-  margin: 20px -15px;
+  margin: 20px 0;
   @media(min-width:$large){
     display: block;
   }
@@ -289,6 +292,19 @@
     margin: 20px 0;
     .catalog-list{
       z-index: 1000;
+    }
+  }
+}
+.footer-form{
+  @media(min-width:$large){
+    width: 100%;
+    background: $sliderBg;
+    padding: 30px 0;
+    margin-bottom:-100px;
+    a{
+      font: $fMedium;
+      color: $gambActive;
+      text-transform: uppercase;
     }
   }
 }

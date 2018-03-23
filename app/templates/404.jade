@@ -1,0 +1,15 @@
+extends _layouts/inner
+block title
+  title Страница не найдена
+block header
+  include _layouts/header_inner  
+block content
+  .container
+    .blockwrap
+      .col-4
+        h1 Страница
+          br
+          |не найдена
+      .col-8
+        .image-404
+          img(src="/assets/404.png")(alt="")
