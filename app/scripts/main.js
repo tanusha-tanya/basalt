@@ -1,19 +1,19 @@
-var gamburger = document.querySelector('.gamburger'),
-    header = document.querySelector('.header'),
-    menuOpen = document.querySelector('.gamburger-menu'),
-    isClose = true;
-gamburger.addEventListener( "click" , function(){isClose? openMenu() : closenMenu()});
-
-  function openMenu(){
-    header.classList.add("gamburger-menu-open");
-    menuOpen.style.animation = "openMenu 1s linear";
-    isClose = false;
-  };
-  function closenMenu(){
-    menuOpen.style.animation = "closeMenu 1s linear";
-    header.classList.remove("gamburger-menu-open");
-    isClose = true;
+$(document).ready(function() {
+      $("#my-menu").mmenu();
+      $("#mm-1").append('<div class="header-contacts"><div class="header-tel"><a href="tel:+73414547115"><svg role="img" width="30" height="30" class="phone"><use xlink:href="#telephone"></use></svg><span class="num">+7 (34145) <span class="weight">47-115</span></span></a></div><div class="header-text"><p><svg role="img" width="15" height="15"><use xlink:href="#local"></use></svg><span>Адрес: </span><a href="mailto:sigmau@mail.ru">г. Воткинск, ул. Мира, 1а</a></p><p><svg role="img" width="15" height="15"><use xlink:href="#email"> </use></svg><span>E-mail: </span><a href="mailto:sigmau@mail.ru">sigmau@mail.ru</a></p></div></div>');
+});
+$("#menuOpen").on("click", function(){
+  if($("#menuOpen").hasClass("open")){
+    $("#my-menu").hide();
+    $("body").removeClass("noScroll");
+    $("#menuOpen").removeClass("open");
   }
+  else{
+    $("#my-menu").show();
+    $("body").addClass("noScroll");
+    $("#menuOpen").addClass("open");
+  }
+});
 $(window).on("load",function(){
   $(".scroll-container").mCustomScrollbar({
     axis:"x",

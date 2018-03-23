@@ -50,6 +50,13 @@ header.header{
     bottom: -8px;
  }
 }
+.mm-menu_offcanvas{
+  .header-contacts{
+    @media(min-width:$tablet){
+      display:block;
+    }
+  }
+}
 .header-contacts{
   display:flex;
   flex-direction: column;
@@ -202,55 +209,13 @@ header.header{
       }
   }
 }
-header.header.gamburger-menu-open{
+.wrap-gamburger.open{
 .gamburger{
     background: $gambActive;
-  }
-  .header-tel{
-      @media(max-width: $tablet){
-    order: -1;
-    margin-bottom: 20px;
-  }
-  }
-.gamburger-menu{
-  height: auto;
-  display:block;
-  width: 100%;
-  @media(min-width: $medium){
-    position: absolute;
-    top: 80px;
-    left: 0;
+    right: 10px;
   }
 }
-}
-@keyframes openMenu{
-  from {
-    height: 0;
-  }
-  25%{
-    height: 25%;
-  }
-  50%{
-    height: 50%;
-  }
-  to {
-    height: auto;
-  }
-}
-@keyframes closeMenu{
-  from {
-    height: auto;
-  }
-  25%{
-    height: 50%;
-  }
-  50%{
-    height: 25%;
-  }
-  to {
-    height: 0;
-  }
-}
+
 .full-menu{
   display: none;
   @media(min-width: $large) {

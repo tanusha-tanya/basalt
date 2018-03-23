@@ -132,7 +132,7 @@
 }
 .about-wrap__inner{
   padding: 20px 30px 0 30px;
-    @media(min-width:$large) {
+    @media(min-width:$ipad) {
       display: flex;
       padding: 0;
   }
@@ -160,17 +160,14 @@
   margin: 40px -30px;
   position: relative;
   height: auto;
-  padding-top: 100%;
-  @media(min-width:$tablet){
-    padding-top: 63%;
-  }
+  overflow: hidden;
   @media(min-width:$ipad){
-   padding-top: 50%;
+    margin: 0 15px;
+    order: -1;
   }
   @media(min-width:$large){
-    margin: 0;
-    order: -1;
     width: 50%;
+    margin: 0;
   }
   & > ymaps {
     position: absolute;
