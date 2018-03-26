@@ -122,8 +122,7 @@ $(".share-btn").on("click", function(){
   var conteiner = $('.share-btn').closest(".share-container");
   conteiner.toggleClass('share-open')
 });
-
- $('.bounceInLeft').addClass("animated");
+AOS.init()
  $('.up').on("click", function(){
    $('html, body').animate({scrollTop:0}, 'slow');
  })
