@@ -7,10 +7,11 @@
   position: absolute;
   right: 30px;
   bottom: 148px;
+  cursor:pointer;
   @media(min-width: $large){
   bottom: 244px;
   }
-  a{
+  span{
     color:   $footerh3;
     text-decoration: none;
   }

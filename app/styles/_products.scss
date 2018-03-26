@@ -30,6 +30,7 @@
 .product-name{
   h3{
     max-width: 90%;
+    cursor:pointer;
   }
   position:relative;
   min-height: 130px;
@@ -45,25 +46,35 @@
   ul{
     li{
       list-style:none;
-      margin: 20px 0;
+      margin: 10px 0;
       a{
         color: $pText;
         font: $fMedium;
         text-decoration: none;
         @media(min-width:$large){
           font: $fBase;
-          border-bottom: 1px solid $fBase;
         }
       }
     }
   }
 }
-.productcat-item.productcat-active, .productcat-item:hover{
+.product-wrap{
+  position:relative;
+}
+.productcat-item.productcat-active, .productcat-item:hover, .productcat-item:focus{
   .product-list{
     display: block;
     background: $bodyBg;
     position:absolute;
     z-index:1000;
+    width: 100%;
+    padding-left:20px;
+      a{
+        text-decoration:underline;
+        &:hover{
+          color:$regTxt;
+        }
+      }
   }
   .product-name{
     svg{
@@ -76,6 +87,61 @@
       filter: none;
     }
   }
+}
+.product-sub{
+  &:hover{
+    label{
+    color: $gambActive;
+  }
+}
+  ul{
+  display: none;
+  li{
+    padding-left: 20px;
+    &:hover{
+      position:relative;
+      &:before{
+        content:"";
+        background: url(/images/svg/menuarow.svg);
+        position:absolute;
+        width: 15px;
+        height: 8px;
+        left: 0;
+        top: 6px;
+      }
+    }
+  }
+}
+  &:hover{
+    ul{
+      display: block;
+    }
+  }
+.product-input{
+  position:absolute;
+  visibility: hidden;
+  &+label{
+    text-decoration: underline;
+    cursor: pointer;
+    font: $fMedium;
+    @media(min-width:$large){
+      font: $fBase;
+    }
+  }
+  &:checked{
+    &+label{
+      color: $gambActive;
+    }
+    &~ul{
+      display:block;
+    }
+  }
+  &+label{
+    &:hover{
+      color: $gambActive;
+    }
+  }
+}
 }
 .productslider-item{
   margin: 20px 0;
@@ -162,8 +228,48 @@
     }
   }
   &:hover, &.activecat{
-    ul{
-      display: block;
+      color:$gambActive;
+      ul{
+        display: block;
+        li:hover{
+          position:relative;
+          &:before{
+            content:"";
+            background: url(/images/svg/menuarow.svg);
+            position:absolute;
+            width: 15px;
+            height: 8px;
+            left: 0;
+            top: 6px;
+          }
+        }
+      }
+  }
+}
+.catalog-input__sub{
+  visibility: hidden;
+  position: absolute;
+  &+label{
+    text-decoration: underline;
+  }
+  &:checked,{
+      &+label{
+        color:$gambActive;
+      &~ul{
+        display: block;
+        li:hover{
+          position:relative;
+          &:before{
+          content:"";
+          background: url(/images/svg/menuarow.svg);
+          position:absolute;
+          width: 15px;
+          height: 8px;
+          left: 0;
+          top: 6px;
+        }
+      }
+      }
     }
   }
 }
@@ -174,25 +280,31 @@
   border-top: 2px $gambActive solid;
   padding-top: 15px;
   transition: linear border-color .3s;
+  cursor:pointer;
   li{
     list-style: none;
     margin: 5px 0;
   }
-    &>a{
+  .catalog-input{
+    visibility: hidden;
+    position: absolute;
+    &+label{
       display: block;
       color: $regTxt;
       font: $fMedium;
       text-decoration: none;
       text-transform:uppercase;
       min-height: 130px;
+      cursor:pointer;
     }
+  }
    svg{
      position: absolute;
      right: 0;
      top: 125px;
      transition: linear transform .3s;
    }
-   &:hover, &.activecat{
+   &:hover{
     border-color: $borderActive;
      .catalog-list{
       display: block;
@@ -207,6 +319,24 @@
       transform: rotate(180deg);
      }
    }
+}
+.catalog-list a:hover{
+  color: $regTxt;
+}
+.catalog-input:checked{
+ border-color: $borderActive;
+  &~.catalog-list{
+   display: block;
+   margin-top: -10px;
+   padding: 10px;
+   box-shadow: 0px 4px 7px 3px $shadow;
+   position: absolute;
+   width:100%;
+   background: $background;
+  }
+  svg{
+   transform: rotate(180deg);
+  }
 }
 .slick-dots{
   position: relative;

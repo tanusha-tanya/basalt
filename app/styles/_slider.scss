@@ -8,6 +8,9 @@
   @media(min-width: $tablet){
   margin-top: 0;
   }
+  @media(min-width: $large){
+    margin-bottom: 40px;
+  }
 }
 .slider-item{
   width: 100%;
@@ -132,7 +135,15 @@
 .slider-arrows{
   position:relative;
   height: 53px;
+  cursor: pointer;
   margin-left: 30px;
+  @media(min-width:$large){
+    margin-left: 0;
+  }
+}
+.slider-arrows svg.slick-disabled{
+  color: $footerh3;
+  fill: $footerh3;
 }
 .slider-arrows svg{
   width: 40px;

@@ -1,17 +1,23 @@
 .share-container{
-  width: 185px;
+  width: 26px;
   display: flex;
   align-items: center;
   float: right;
   margin: 40px 0;
+  overflow:hidden;
+  transition: width linear 0.5s;
   &:before{
     content: "";
     display: block;
     clear: both;
   }
+  &.share-open{
+    width: 185px;
+  }
 }
 .share-btn{
   margin-right:20px;
+  cursor: pointer;
 }
 .share-hidden{
   display: flex;

@@ -5,6 +5,9 @@
   flex-wrap: wrap;
   margin: 40px -15px;
   }
+    @media(min-width: $large){
+        margin: -40px -15px;
+    }
 }
 .lenta-item{
   margin: 50px auto;
@@ -15,7 +18,6 @@
     @media(min-width: $large){
       display: flex;
       align-items: flex-start;
-      flex-grow: 1;
   }
 }
 .detailarticle{
@@ -49,7 +51,7 @@
     transition: linear filter .3s;
   }
     @media(min-width:$large){
-  width: 50%;
+      width: calc(100% - 270px);
 }
 }
 .detailarticle-content{

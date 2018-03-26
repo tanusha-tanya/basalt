@@ -1,0 +1,56 @@
+.mCS-my-theme.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+  background-color: $footerh3;
+  height: 22px;
+  opacity:0.75;
+ }
+.mCS-my-theme.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
+  background-color: $footerh3;
+  opacity:1;
+}
+.mCS-my-theme.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+  height: 22px;
+  border-radius:0;
+  margin: 4px 3px;
+}
+
+.mCSB_scrollTools.mCSB_1_scrollbar.mCS-my-theme.mCSB_scrollTools_horizontal{
+  height: 30px;
+}
+.mCS-my-theme.mCSB_scrollTools .mCSB_draggerRail{
+  height: 30px;
+  background-color: $background;
+}
+.mCS-my-theme.mCSB_scrollTools.mCSB_scrollTools_horizontal a + .mCSB_draggerContainer{
+  margin: 0 30px;
+  background: $background;
+}
+.mCS-my-theme.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft,
+.mCS-my-theme.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{
+  width:30px;
+  height:30px;
+  border: 1px solid $borderMenu;
+  background: $footTxt;
+  opacity: 1;
+  &:before{
+    content:"";
+    position:absolute;
+    width: 13px;
+    height:13px;
+    border-left: 2px solid $borderMenu;
+    border-bottom:2px solid $borderMenu;
+    opacity:0.75;
+    &:hover{
+      opacity:1;
+    }
+  }
+}
+.mCS-my-theme.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft:before{
+  transform: rotate(45deg);
+  top: 7px;
+  left: 9px;
+}
+.mCS-my-theme.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight:before{
+  transform: rotate(-136deg);
+  top: 7px;
+  right: 9px;
+}

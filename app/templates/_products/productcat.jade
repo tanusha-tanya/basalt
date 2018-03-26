@@ -1,5 +1,5 @@
 .productcat
-  .productcat-item.productcat-active
+  .productcat-item
     .product-img
       img(src="/assets/product1.jpg")(alt="")
     .product-wrap
@@ -8,8 +8,14 @@
         svg(role="img")(width="20")(height="10"): use(xlink:href="#arrowdown")
       .product-list
         ul
-          li
-            a(href="productdetail.html")Холсты
+          li.product-sub
+            input.product-input(type="checkbox")(id="product1")
+            label(for="product1")Холсты
+            ul
+              li 
+                a(href="productdetail.html")Клеевая огнезащита
+              li
+                a(href="productdetail.html")Бесклеевая огнезащита
           li
             a(href="productdetail.html")Маты прошивные базальтовые
           li

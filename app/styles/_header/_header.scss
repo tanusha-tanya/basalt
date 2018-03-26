@@ -2,6 +2,10 @@ header.header{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom:30px;
+  @media(min-width:$large){
+    margin-bottom:0;
+  }
   .logo{
     svg{
           width: 190px;
@@ -72,6 +76,9 @@ header.header{
     color: $nimpTxt;
     font: $fBase;
     margin: 8px 0;
+    @media(min-width:$large){
+      margin:0;
+    }
   }
   a{
     text-decoration: none;
@@ -138,11 +145,15 @@ header.header{
         }
         @media(min-width:$large){
           border-bottom: none;
+          font: $fphone_min;
         }
       .weight{
         font: $fWidth;
       @media(min-width:$medium) and (max-width: $ipad){
-          font: $fBase;
+          font: $fWidth_min;
+        }
+      @media(min-width:$large){
+          font: $fphone_min;
         }
       }
     }
@@ -161,6 +172,7 @@ header.header{
           width: 20px;
           height: 20px;
           margin-right:10px;
+          margin-top:5px;
         }
           @media(min-width:$medium) and (max-width: $ipad){
             margin-right: 5px;
@@ -212,7 +224,6 @@ header.header{
 .wrap-gamburger.open{
 .gamburger{
     background: $gambActive;
-    right: 10px;
   }
 }
 
@@ -223,7 +234,7 @@ header.header{
     width: 100%;
     margin-top: 20px;
     border-bottom: 1px $borderMenu solid;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     ul{
       display: flex;
       justify-content: space-between;
@@ -243,7 +254,7 @@ header.header{
               height: 2px;
               width:100%;
               background: $borderActive;
-              bottom: -26px;
+              bottom: -19px;
               left: 0;
             }
           }

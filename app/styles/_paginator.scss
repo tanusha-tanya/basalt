@@ -13,17 +13,30 @@
   }
 }
 .paginator-href{
-  color: #000000;
+  color: $regTxt;
   text-decoration: none;
   font: $fMedium;
   svg{
     color: $gamb;
     fill:$gamb;
   }
+    &:hover{
+        color: $gambActive;
+        fill:$gambActive;
+    }
 }
 .paginator-href__prev{
   svg{
     transform: rotate(180deg);
+  }
+}
+.paginator-href__prev, .paginator-href__next{
+  &:hover{
+    svg
+    {
+    color: $regTxt;
+    fill:$regTxt;
+  }
   }
 }
 .paginator-href__current{
