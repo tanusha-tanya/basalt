@@ -1,3 +1,41 @@
+.slider-item.slick-slide{
+  display:none;
+}
+.slider-item.slick-slide.slick-current.slick-active{
+  display:block!important;
+  @media(min-width:$ipad){
+  .slider-title{
+    -webkit-animation-name: bounceInLeft;
+    animation-name: bounceInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    .slider-img{
+      -webkit-animation-name: bounceInRight;
+      animation-name: bounceInRight;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-delay: .5s;
+      animation-delay: .5s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }
+  .slider-h1, .slider-description{
+    -webkit-animation-name: bounceInLeft;
+    animation-name: bounceInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+  }
+}
 .slider{
   overflow: hidden;
 }

@@ -6,11 +6,11 @@
   margin: 40px -15px;
   }
     @media(min-width: $large){
-        margin: -40px -15px;
+        margin: 0;
     }
 }
 .lenta-item{
-  margin: 50px auto;
+  margin: 42px auto;
   @media(min-width: $ipad) and (max-width: $large){
    width:calc(100% / 2 - 30px);
    margin: 20px 15px;

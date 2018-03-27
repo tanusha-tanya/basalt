@@ -6,23 +6,10 @@ block header
 block content
   .container
     .blockwrap
-      .col-4
+      .col-4(data-aos="fade-right")
         h1 Нормы загрузки автотранспорта
-      .col-8
+      .col-8(data-aos="fade-left")
         include _conducts/table
         .min-show
           include _contacts/form
-  .footer-form.large-show
-    .container
-      .blockwrap
-        .col-4
-          h2 Остались вопросы?
-        .col-8
-          .form-wrap
-            .form-name Заполните форму или позвоните по номеру:
-            .form-tel
-              a(href="tel:+73414547115")
-                svg.form-svg(role="img")(width="20")(height="20"): use(xlink:href="#telephone")
-                span +7 (34145) 47-115
-            .formpopup
-              a.h2.openform(href="form.html")Задать вопрос
+  include _layouts/footer-form

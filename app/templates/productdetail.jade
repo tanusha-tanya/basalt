@@ -6,107 +6,13 @@ block header
 block content
   .container
     .blockwrap
-      .col-4
+      .col-4(data-aos="fade-right")
         .h1 Продукция
-        .catalogmenu-container
-          .catalogmenu-wrap__column
-            .catalog-item 
-              svg(role="img")(width="20")(height="10"): use(xlink:href="#arrowdown")
-              input.catalog-input(type="checkbox")(id="menu")
-              label(for="menu") Теплоизоляция  в промышленном и гражданском строительстве
-              ul.catalog-list 
-                li.catalog-sub
-                  input.catalog-input__sub(type="checkbox")(id="sub")
-                  label(for="sub")Холсты
-                  ul
-                    li
-                      a(href="productdetail.html")Клеевая огнезащита
-                    li
-                      a(href="productdetail.html")Бесклеевая огнезащита
-                li
-                  a(href="productdetail.html")Маты прошивные базальтовые
-                li
-                  a(href="productdetail.html")МБОР
-                li
-                  a(href="productdetail.html")Базальтовые плиты
-            .catalog-item
-              svg(role="img")(width="20")(height="10"): use(xlink:href="#arrowdown")
-              input.catalog-input(type="checkbox")(id="menu1") 
-              label(for="menu1")Теплоизоляция  промышленного 
-                br
-                | и бытового оборудования
-              ul.catalog-list 
-                li.catalog-sub
-                  input.catalog-input__sub(type="checkbox")(id="sub1")
-                  label(for="sub1")Холсты
-                  ul
-                    li
-                      a(href="productdetail.html")Клеевая огнезащита
-                    li
-                      a(href="productdetail.html")Бесклеевая огнезащита
-                li
-                  a(href="productdetail.html")Маты прошивные базальтовые
-                li
-                  a(href="productdetail.html")МБОР
-                li
-                  a(href="productdetail.html")Базальтовые плиты
-            .catalog-item 
-              svg(role="img")(width="20")(height="10"): use(xlink:href="#arrowdown")
-              input.catalog-input(type="checkbox")(id="menu3") 
-              label(for="menu3")Сертифицированная огнезащита металлоконструкций
-                br
-                | и воздуховодов
-              ul.catalog-list 
-                li.catalog-sub
-                  input.catalog-input__sub(type="checkbox")(id="sub2")
-                  label(for="sub2")Холсты
-                  ul
-                    li
-                      a(href="productdetail.html")Клеевая огнезащита
-                    li
-                      a(href="productdetail.html")Бесклеевая огнезащита
-                li
-                  a(href="productdetail.html")Маты прошивные базальтовые
-                li
-                  a(href="productdetail.html")МБОР
-                li
-                  a(href="productdetail.html")Базальтовые плиты
-            .catalog-item
-              svg(role="img")(width="20")(height="10"): use(xlink:href="#arrowdown")
-              input.catalog-input(type="checkbox")(id="menu4")
-              label(for="menu4")теплоизоляция вагонов и контейнеров
-              ul.catalog-list 
-                li.catalog-sub
-                  input.catalog-input__sub(type="checkbox")(id="sub3")
-                  label(for="sub3")Холсты
-                  ul
-                    li
-                      a(href="productdetail.html")Клеевая огнезащита
-                    li
-                      a(href="productdetail.html")Бесклеевая огнезащита
-                li
-                  a(href="productdetail.html")Маты прошивные базальтовые
-                li
-                  a(href="productdetail.html")МБОР
-                li
-                  a(href="productdetail.html")Базальтовые плиты
-      .col-8
+        include _products/productleft
+      .col-8(data-aos="fade-left")
         .h2.black МБОР материал базальтовый огнезащитный рулонный
         include _products/productslider
         include _products/tabs
         .min-show
           include _contacts/form
-  .footer-form.large-show
-    .container
-      .blockwrap
-        .col-4
-          h2 Остались вопросы?
-        .col-8
-          .form-wrap
-            .form-name Заполните форму или позвоните по номеру:
-            .form-tel
-              a(href="tel:+73414547115")
-                svg.form-svg(role="img")(width="20")(height="20"): use(xlink:href="#telephone")
-                span +7 (34145) 47-115
-            .formpopup
-              a.h2.openform(href="form.html")Задать вопрос
+  include _layouts/footer-form

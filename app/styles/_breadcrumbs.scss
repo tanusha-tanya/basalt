@@ -1,14 +1,13 @@
 .breadcrumbs-wrap{
-  display: none;
-  @media(min-width: $large){
-    display: block;
-    position: relative;
+  width: 1170px;
+  max-width: 1170px;
+  position: relative;
+  margin: 0 auto;
     .breadcrumbs{
       position:absolute;
-      top:-40px;
+      top:-50px;
     }
   }
-}
 .breadcrumbs-li, .breadcrumbs-li a{
   display: inline-block;
   font:$fSmall;

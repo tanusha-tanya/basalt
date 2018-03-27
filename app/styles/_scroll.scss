@@ -3,7 +3,7 @@
   height: 22px;
   opacity:0.75;
  }
-.mCS-my-theme.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
+.mCS-my-theme.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, .mCS-my-theme.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{
   background-color: $footerh3;
   opacity:1;
 }

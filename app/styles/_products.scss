@@ -19,11 +19,11 @@
   padding: 20px 0;
   border-bottom: 2px solid;
   border-color: $gambActive;
-  transition: easy border-color .3s;
+  transition: linear border-color .3s;
   img{
     max-width: 100%;
     filter: grayscale(100%);
-    transition: easy filter .3s;
+    transition: linear filter .3s;
   }
 }
 
@@ -372,7 +372,7 @@
   }
 }
 .scroll-container{
-  padding: 30px 5px;
+  padding: 38px 0;
 }
 .certificate-slider{
   margin: 20px -30px;

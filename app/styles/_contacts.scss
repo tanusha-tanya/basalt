@@ -3,6 +3,7 @@
   position:relative;
   height: auto;
   padding-top: 100%;
+  background: $sliderBg;
   &>ymaps{
     position: absolute;
     top: 0;

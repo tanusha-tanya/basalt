@@ -4,7 +4,7 @@ header.header{
   flex-wrap: wrap;
   margin-bottom:30px;
   @media(min-width:$large){
-    margin-bottom:0;
+    margin-bottom:50px;
   }
   .logo{
     svg{
@@ -256,6 +256,7 @@ header.header{
               background: $borderActive;
               bottom: -19px;
               left: 0;
+              transition: linear background-color .3s;
             }
           }
         }

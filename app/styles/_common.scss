@@ -54,7 +54,6 @@ body{
 .col-2{
   @media(min-width:$large) {
     width: calc(50% - 30px);
-    margin: 0 15px;
   }
 }
 .large-show{
