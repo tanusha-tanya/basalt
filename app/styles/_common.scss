@@ -9,6 +9,7 @@ html, body {
   font: $fBase;
   color: $pText;
   background: $bodyBg;
+  overflow-x: hidden;
 }
 body{
   display: flex;
