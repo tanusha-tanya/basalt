@@ -22,6 +22,7 @@
   transition: linear border-color .3s;
   img{
     max-width: 100%;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
     filter: grayscale(100%);
     transition: linear filter .3s;
   }
@@ -162,6 +163,10 @@
       justify-content: flex-start;
       margin: 0 -1px;
     }
+    @media(min-width: $large){
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
 }
 .tabs-btn{
   margin: 5px 0;
@@ -173,6 +178,7 @@
   padding: 20px;
   background: $background;
   transition: linear color 0.3s, linear background 0.3s;
+  cursor:pointer;
   @media(min-width: $tablet){
     width: calc(50% - 10px);
     margin: 5px 5px;
@@ -182,7 +188,8 @@
     margin: 5px 1px;
   }
   @media(min-width: $large){
-    padding: 20px 25px;
+    padding: 20px;
+    flex-grow: 1;
   }
 }
 .tabs-btn__active.tabs-btn, .tabs-btn:hover{
@@ -382,8 +389,7 @@
   @media(min-width: $large){
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px -30px;
+    margin: 20px -15px;
   }
 }
 .certificate-item{
@@ -393,6 +399,8 @@
     max-width: 100%;
   }
   @media(min-width: $large){
+    max-width: calc(25% - 30px);
+    width:calc(25% - 30px);
     margin: 15px;
     display: flex;
     flex-direction: column;
@@ -401,11 +409,16 @@
 }
 
 .certificate-img{
+  line-height: 0;
   @media(min-width: $large){
   background: $borderMenu;
   flex-grow: 1;
-  padding: 20% 0;
+  max-height:237px;
 }
+  a{
+    line-height: 0;
+    font-size: 0;
+  }
 }
 .certificate-title{
   margin-top: 20px;
