@@ -162,10 +162,10 @@
     @media(min-width: $ipad){
       justify-content: flex-start;
       margin: 0 -1px;
+      flex-wrap: nowrap;
     }
     @media(min-width: $large){
       justify-content: space-between;
-      flex-wrap: nowrap;
     }
 }
 .tabs-btn{
@@ -383,13 +383,16 @@
 }
 .certificate-slider{
   margin: 20px -30px;
+  max-height:700px;
+  overflow-y:hidden;
   @media(min-width: $tablet){
     margin: 20px auto;
   }
-  @media(min-width: $large){
+  @media(min-width: $ipad){
     display: flex;
     flex-wrap: wrap;
     margin: 20px -15px;
+    max-height:auto;
   }
 }
 .certificate-item{
@@ -398,7 +401,7 @@
   img{
     max-width: 100%;
   }
-  @media(min-width: $large){
+  @media(min-width: $ipad){
     max-width: calc(25% - 30px);
     width:calc(25% - 30px);
     margin: 15px;
@@ -410,10 +413,13 @@
 
 .certificate-img{
   line-height: 0;
-  @media(min-width: $large){
+  @media(min-width: $ipad){
   background: $borderMenu;
   flex-grow: 1;
   max-height:237px;
+  display: flex;
+	align-items: center;
+  overflow: hidden;
 }
   a{
     line-height: 0;

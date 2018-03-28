@@ -1,6 +1,7 @@
 $(document).ready(function() {
-      $("#my-menu").mmenu();
-      $("#mm-1").append('<div class="header-contacts"><div class="header-tel"><a href="tel:+73414547115"><svg role="img" width="30" height="30" class="phone"><use xlink:href="#telephone"></use></svg><span class="num">+7 (34145) <span class="weight">47-115</span></span></a></div><div class="header-text"><p><svg role="img" width="15" height="15"><use xlink:href="#local"></use></svg><span>Адрес: </span><a href="mailto:sigmau@mail.ru">г. Воткинск, ул. Мира, 1а</a></p><p><svg role="img" width="15" height="15"><use xlink:href="#email"> </use></svg><span>E-mail: </span><a href="mailto:sigmau@mail.ru">sigmau@mail.ru</a></p></div></div>');
+  var string = '<div class="header-contacts"><div class="header-tel"><a href="tel:+73414547115"><svg role="img" width="30" height="30" class="phone"><use xlink:href="#telephone"></use></svg><span class="num">+7 (34145) <span class="weight">47-115</span></span></a></div><div class="header-text"><p><svg role="img" width="15" height="15"><use xlink:href="#local"></use></svg><span>Адрес: </span><a href="mailto:sigmau@mail.ru">г. Воткинск, ул. Мира, 1а</a></p><p><svg role="img" width="15" height="15"><use xlink:href="#email"> </use></svg><span>E-mail: </span><a href="mailto:sigmau@mail.ru">sigmau@mail.ru</a></p></div></div>'
+$("#my-menu").mmenu();
+$(".mm-panel:first-child" ).append(string);
 var productcat
 $(".product-name").on("click", function(){
   productcat = this.closest(".productcat-item");
@@ -12,11 +13,14 @@ $(".product-name").on("click", function(){
     productcat.classList.add("productcat-active");
   }
 });
+var menuHide = function(){
+  $("#my-menu").hide();
+  $("body").removeClass("noScroll");
+  $("#menuOpen").removeClass("open");
+}
 $("#menuOpen").on("click", function(){
   if($("#menuOpen").hasClass("open")){
-    $("#my-menu").hide();
-    $("body").removeClass("noScroll");
-    $("#menuOpen").removeClass("open");
+    menuHide()
   }
   else{
     $("#my-menu").show();
@@ -36,7 +40,24 @@ $('.slider').slick({
   appendArrows:$('.slider-arrows'),
   infinite:false
 });
-$('.certificate-slider').slick({
+$('.productslider').slick({
+  dots: true,
+  arrows: false,
+  mobileFirst: true,
+  responsive: [
+    {
+      breakpoint: 1200,
+      dots: false,
+      arrows: true,
+      prevArrow:'<svg role="img" width="40" height="20" class="arrowleft"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow"> </use></svg>',
+      nextArrow:'<svg role="img" width="40" height="20" class="arrowright"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow"> </use></svg>',
+      appendArrows:$('.slider-arrows'),
+      infinite:false
+    }
+ ]
+});
+var certificateSlider = function(){
+  $('.certificate-slider').slick({
   dots: true,
   arrows: false,
   centerMode: true,
@@ -54,23 +75,8 @@ $('.certificate-slider').slick({
       settings: "unslick"
     }
   ]
-});
-$('.productslider').slick({
-  dots: true,
-  arrows: false,
-  mobileFirst: true,
-  responsive: [
-    {
-      breakpoint: 1200,
-      dots: false,
-      arrows: true,
-      prevArrow:'<svg role="img" width="40" height="20" class="arrowleft"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow"> </use></svg>',
-      nextArrow:'<svg role="img" width="40" height="20" class="arrowright"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow"> </use></svg>',
-      appendArrows:$('.slider-arrows'),
-      infinite:false
-    }
- ]
-});
+})
+}
 $('.open-img').magnificPopup({
 		type: 'image',
 		closeOnContentClick: false,
@@ -108,6 +114,7 @@ for (var i=0 ; i<tab.length; i++) {
   var currentTab = tabContent[dataIndex].classList;
   that.add('tabs-btn__active');
   currentTab.add('tabs-inner__current');
+  certificateSlider();
   });
 }
 $(".share-btn").on("click", function(){
@@ -115,9 +122,13 @@ $(".share-btn").on("click", function(){
   conteiner.toggleClass('share-open')
 });
 AOS.init({
-  disable: window.innerWidth < 1024
+  disable: window.innerWidth < 1200
 });
  $('.up').on("click", function(){
    $('html, body').animate({scrollTop:0}, 'slow');
+ });
+ $(window).resize(function() {
+   if ($(window).width() > 1200)
+   menuHide()
  });
 });
