@@ -132,3 +132,22 @@ AOS.init({
    menuHide()
  });
 });
+ymaps.ready(init);
+    var myMap,
+        placemark,
+        object,
+        coords,
+        place;
+function init(){
+  myMap = new ymaps.Map ("map", {
+  center: [57.05336757, 53.98733850],
+    zoom: 16
+  });
+    $('.object').on("click", function(){
+      object = this;
+      coords = object.getAttribute('data-coords'),
+      place = coords.split(',');
+      placemark = new ymaps.Placemark(place, { hintContent: 'Центральный офис', balloonContent: 'г. Воткинск, ул. Мира 1а' });
+      myMap.geoObjects.add(placemark)
+    });
+};
