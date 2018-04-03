@@ -252,10 +252,10 @@ header.header{
             &:after{
               content: "";
               position:absolute;
-              height: 2px;
+              height: 3px;
               width:100%;
               background: $borderActive;
-              bottom: -19px;
+              bottom: -21px;
               left: 0;
               transition: linear background-color .3s;
             }

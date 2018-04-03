@@ -1,7 +1,9 @@
 $(document).ready(function() {
-  var string = '<div class="header-contacts"><div class="header-tel"><a href="tel:+73414547115"><svg role="img" width="30" height="30" class="phone"><use xlink:href="#telephone"></use></svg><span class="num">+7 (34145) <span class="weight">47-115</span></span></a></div><div class="header-text"><p><svg role="img" width="15" height="15"><use xlink:href="#local"></use></svg><span>Адрес: </span><a href="mailto:sigmau@mail.ru">г. Воткинск, ул. Мира, 1а</a></p><p><svg role="img" width="15" height="15"><use xlink:href="#email"> </use></svg><span>E-mail: </span><a href="mailto:sigmau@mail.ru">sigmau@mail.ru</a></p></div></div>'
+var string = '<div class="header-contacts"><div class="header-tel"><a href="tel:+73414547115"><svg role="img" width="30" height="30" class="phone"><use xlink:href="#telephone"></use></svg><span class="num">+7 (34145) <span class="weight">47-115</span></span></a></div><div class="header-text"><p><svg role="img" width="15" height="15"><use xlink:href="#local"></use></svg><span>Адрес: </span><a href="mailto:sigmau@mail.ru">г. Воткинск, ул. Мира, 1а</a></p><p><svg role="img" width="15" height="15"><use xlink:href="#email"> </use></svg><span>E-mail: </span><a href="mailto:sigmau@mail.ru">sigmau@mail.ru</a></p></div></div>'
 $("#my-menu").mmenu();
 $(".mm-panel:first-child" ).append(string);
+
+
 var productcat
 $(".product-name").on("click", function(){
   productcat = this.closest(".productcat-item");
@@ -137,17 +139,23 @@ ymaps.ready(init);
         placemark,
         object,
         coords,
+        point,
         place;
 function init(){
   myMap = new ymaps.Map ("map", {
-  center: [57.05336757, 53.98733850],
-    zoom: 16
+  zoom: 16,
+  center: [57.053631, 53.987371]
   });
+  placemark = new ymaps.Placemark([57.053631, 53.987371], {balloonContent: 'г. Воткинск, ул. Мира 1а' });
+  myMap.geoObjects.add(placemark);
     $('.object').on("click", function(){
       object = this;
       coords = object.getAttribute('data-coords'),
       place = coords.split(',');
-      placemark = new ymaps.Placemark(place, { hintContent: 'Центральный офис', balloonContent: 'г. Воткинск, ул. Мира 1а' });
-      myMap.geoObjects.add(placemark)
+      baloonText = object.getAttribute('data-baloon'),
+      myMap.geoObjects.remove(placemark);
+      myMap.setCenter(place);
+      placemark = new ymaps.Placemark(place, {balloonContent: baloonText  });
+      myMap.geoObjects.add(placemark);
     });
 };
