@@ -1,7 +1,7 @@
 'use strict';
 
 var gulp = require('gulp'),
-  jade = require('gulp-jade'),
+  jade = require('gulp-pug'),
   sass = require('gulp-sass'),
   prefix = require('gulp-autoprefixer'),
   notify = require('gulp-notify'),
